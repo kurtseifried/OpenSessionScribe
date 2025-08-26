@@ -1,0 +1,1 @@
+"""Slide detection, OCR, and description modules."""

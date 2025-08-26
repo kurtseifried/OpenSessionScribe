@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opensessionscribe"
+version = "0.1.0"
+description = "Local podcast and webinar processing toolkit"
+readme = "README.md"
+authors = [
+    {name = "OpenSessionScribe Contributors"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10", 
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+dependencies = [
+    # Core framework
+    "pydantic>=2.0.0",
+    "typer>=0.9.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    
+    # Media processing
+    "yt-dlp>=2023.7.6",
+    "whisperx",  # TODO: Specify exact version when stable
+    "pyannote.audio>=3.1.0",
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    
+    # Computer vision & OCR
+    "opencv-python>=4.8.0",
+    "paddleocr>=2.7.0",
+    "pytesseract>=0.3.10",
+    "Pillow>=10.0.0",
+    "imagehash>=4.3.1",
+    "scenedetect[opencv]>=0.6.2",
+    
+    # Utilities
+    "psutil>=5.9.0",
+    "structlog>=23.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "httpx>=0.24.0",
+    
+    # Background jobs (Phase 2+)
+    "dramatiq[redis]>=1.14.0",
+    "redis>=4.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.0.280",
+    "mypy>=1.5.0",
+    "pre-commit>=3.3.0",
+]
+
+web = [
+    "jinja2>=3.1.0",
+    "python-multipart>=0.0.6",
+    "websockets>=11.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kurtseifried/OpenSessionScribe"
+Repository = "https://github.com/kurtseifried/OpenSessionScribe"
+Issues = "https://github.com/kurtseifried/OpenSessionScribe/issues"
+
+[project.scripts]
+opensessionscribe = "cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["opensessionscribe*", "cli*", "webapp*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=opensessionscribe --cov-report=term-missing"
