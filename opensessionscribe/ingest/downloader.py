@@ -24,12 +24,8 @@ class MediaDownloader:
         """Download media from URL and prepare for processing."""
         output_dir.mkdir(parents=True, exist_ok=True)
         
-        # Download video/audio
+        # Download video/audio and prepare audio
         media_info = self._download_media(url, output_dir)
-        
-        # Extract/normalize audio for ASR
-        audio_path = self._prepare_audio(media_info, output_dir)
-        media_info["audio_path"] = audio_path
         
         return media_info
     
@@ -56,9 +52,7 @@ class MediaDownloader:
             url
         ]
         
-        if self.config.offline_only:
-            # Don't update yt-dlp if offline mode
-            cmd.append("--no-check-updates")
+        # Note: Removed --no-check-updates as it's not available in all yt-dlp versions
         
         logger.debug(f"Running yt-dlp: {' '.join(cmd)}")
         
@@ -81,6 +75,11 @@ class MediaDownloader:
         
         # Get media info using ffmpeg
         media_info = FFmpegProcessor.get_media_info(media_path)
+        has_video = 'video' in media_info
+        
+        # Prepare audio
+        audio_path = self._prepare_audio({"media_path": media_path, "has_video": has_video}, output_dir)
+        
         media_info.update({
             "url": url,
             "title": info.get('title', ''),
@@ -88,7 +87,9 @@ class MediaDownloader:
             "description": info.get('description', ''),
             "upload_date": info.get('upload_date', ''),
             "media_path": media_path,
-            "has_video": 'video' in media_info
+            "video_path": media_path if has_video else None,
+            "audio_path": audio_path,
+            "has_video": has_video
         })
         
         return media_info

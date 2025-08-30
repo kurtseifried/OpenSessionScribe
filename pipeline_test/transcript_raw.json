@@ -1,0 +1,498 @@
+{
+  "model": "large-v3",
+  "language": "en",
+  "segments": [
+    {
+      "id": "seg_000000",
+      "start": 0.402,
+      "end": 4.014,
+      "text": "Alright, so here we are in front of the elephants.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "start": 0.402,
+          "end": 1.646,
+          "text": "Alright,",
+          "conf": 0.263
+        },
+        {
+          "start": 1.666,
+          "end": 1.706,
+          "text": "so",
+          "conf": 0.002
+        },
+        {
+          "start": 1.726,
+          "end": 1.847,
+          "text": "here",
+          "conf": 0.284
+        },
+        {
+          "start": 1.867,
+          "end": 2.007,
+          "text": "we",
+          "conf": 0.513
+        },
+        {
+          "start": 2.027,
+          "end": 2.248,
+          "text": "are",
+          "conf": 0.836
+        },
+        {
+          "start": 2.328,
+          "end": 2.368,
+          "text": "in",
+          "conf": 0.0
+        },
+        {
+          "start": 2.388,
+          "end": 2.509,
+          "text": "front",
+          "conf": 0.596
+        },
+        {
+          "start": 2.549,
+          "end": 2.589,
+          "text": "of",
+          "conf": 0.928
+        },
+        {
+          "start": 2.649,
+          "end": 2.73,
+          "text": "the",
+          "conf": 0.828
+        },
+        {
+          "start": 2.97,
+          "end": 4.014,
+          "text": "elephants.",
+          "conf": 0.431
+        }
+      ]
+    },
+    {
+      "id": "seg_000001",
+      "start": 4.034,
+      "end": 12.943,
+      "text": "The cool thing about these guys is that they have really, really, really long trunks.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "start": 4.034,
+          "end": 4.114,
+          "text": "The",
+          "conf": 0.409
+        },
+        {
+          "start": 5.278,
+          "end": 5.438,
+          "text": "cool",
+          "conf": 0.212
+        },
+        {
+          "start": 5.459,
+          "end": 5.679,
+          "text": "thing",
+          "conf": 0.896
+        },
+        {
+          "start": 5.719,
+          "end": 6.081,
+          "text": "about",
+          "conf": 0.596
+        },
+        {
+          "start": 6.121,
+          "end": 6.261,
+          "text": "these",
+          "conf": 0.583
+        },
+        {
+          "start": 6.361,
+          "end": 6.522,
+          "text": "guys",
+          "conf": 0.534
+        },
+        {
+          "start": 6.622,
+          "end": 6.963,
+          "text": "is",
+          "conf": 0.778
+        },
+        {
+          "start": 7.204,
+          "end": 7.305,
+          "text": "that",
+          "conf": 0.325
+        },
+        {
+          "start": 7.345,
+          "end": 7.425,
+          "text": "they",
+          "conf": 0.789
+        },
+        {
+          "start": 7.465,
+          "end": 7.606,
+          "text": "have",
+          "conf": 0.613
+        },
+        {
+          "start": 7.987,
+          "end": 8.348,
+          "text": "really,",
+          "conf": 0.816
+        },
+        {
+          "start": 9.311,
+          "end": 9.612,
+          "text": "really,",
+          "conf": 0.8
+        },
+        {
+          "start": 9.692,
+          "end": 9.993,
+          "text": "really",
+          "conf": 0.856
+        },
+        {
+          "start": 10.234,
+          "end": 10.595,
+          "text": "long",
+          "conf": 0.794
+        },
+        {
+          "start": 12.12,
+          "end": 12.943,
+          "text": "trunks.",
+          "conf": 0.213
+        }
+      ]
+    },
+    {
+      "id": "seg_000002",
+      "start": 12.963,
+      "end": 14.388,
+      "text": "And that's cool.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "start": 12.963,
+          "end": 13.023,
+          "text": "And",
+          "conf": 0.359
+        },
+        {
+          "start": 13.063,
+          "end": 13.605,
+          "text": "that's",
+          "conf": 0.574
+        },
+        {
+          "start": 13.625,
+          "end": 14.388,
+          "text": "cool.",
+          "conf": 0.643
+        }
+      ]
+    },
+    {
+      "id": "seg_000003",
+      "start": 14.408,
+      "end": 19.103,
+      "text": "And that's pretty much all there is to say.",
+      "speaker": "SPEAKER_00",
+      "words": [
+        {
+          "start": 14.408,
+          "end": 17.177,
+          "text": "And",
+          "conf": 0.757
+        },
+        {
+          "start": 17.237,
+          "end": 17.397,
+          "text": "that's",
+          "conf": 0.559
+        },
+        {
+          "start": 17.438,
+          "end": 17.598,
+          "text": "pretty",
+          "conf": 0.813
+        },
+        {
+          "start": 17.618,
+          "end": 17.779,
+          "text": "much",
+          "conf": 0.929
+        },
+        {
+          "start": 17.859,
+          "end": 18.02,
+          "text": "all",
+          "conf": 0.467
+        },
+        {
+          "start": 18.04,
+          "end": 18.22,
+          "text": "there",
+          "conf": 0.297
+        },
+        {
+          "start": 18.321,
+          "end": 18.401,
+          "text": "is",
+          "conf": 0.479
+        },
+        {
+          "start": 18.421,
+          "end": 18.581,
+          "text": "to",
+          "conf": 0.54
+        },
+        {
+          "start": 19.023,
+          "end": 19.103,
+          "text": "say.",
+          "conf": 0.25
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "start": 0.402,
+      "end": 1.646,
+      "text": "Alright,",
+      "conf": 0.263
+    },
+    {
+      "start": 1.666,
+      "end": 1.706,
+      "text": "so",
+      "conf": 0.002
+    },
+    {
+      "start": 1.726,
+      "end": 1.847,
+      "text": "here",
+      "conf": 0.284
+    },
+    {
+      "start": 1.867,
+      "end": 2.007,
+      "text": "we",
+      "conf": 0.513
+    },
+    {
+      "start": 2.027,
+      "end": 2.248,
+      "text": "are",
+      "conf": 0.836
+    },
+    {
+      "start": 2.328,
+      "end": 2.368,
+      "text": "in",
+      "conf": 0.0
+    },
+    {
+      "start": 2.388,
+      "end": 2.509,
+      "text": "front",
+      "conf": 0.596
+    },
+    {
+      "start": 2.549,
+      "end": 2.589,
+      "text": "of",
+      "conf": 0.928
+    },
+    {
+      "start": 2.649,
+      "end": 2.73,
+      "text": "the",
+      "conf": 0.828
+    },
+    {
+      "start": 2.97,
+      "end": 4.014,
+      "text": "elephants.",
+      "conf": 0.431
+    },
+    {
+      "start": 4.034,
+      "end": 4.114,
+      "text": "The",
+      "conf": 0.409
+    },
+    {
+      "start": 5.278,
+      "end": 5.438,
+      "text": "cool",
+      "conf": 0.212
+    },
+    {
+      "start": 5.459,
+      "end": 5.679,
+      "text": "thing",
+      "conf": 0.896
+    },
+    {
+      "start": 5.719,
+      "end": 6.081,
+      "text": "about",
+      "conf": 0.596
+    },
+    {
+      "start": 6.121,
+      "end": 6.261,
+      "text": "these",
+      "conf": 0.583
+    },
+    {
+      "start": 6.361,
+      "end": 6.522,
+      "text": "guys",
+      "conf": 0.534
+    },
+    {
+      "start": 6.622,
+      "end": 6.963,
+      "text": "is",
+      "conf": 0.778
+    },
+    {
+      "start": 7.204,
+      "end": 7.305,
+      "text": "that",
+      "conf": 0.325
+    },
+    {
+      "start": 7.345,
+      "end": 7.425,
+      "text": "they",
+      "conf": 0.789
+    },
+    {
+      "start": 7.465,
+      "end": 7.606,
+      "text": "have",
+      "conf": 0.613
+    },
+    {
+      "start": 7.987,
+      "end": 8.348,
+      "text": "really,",
+      "conf": 0.816
+    },
+    {
+      "start": 9.311,
+      "end": 9.612,
+      "text": "really,",
+      "conf": 0.8
+    },
+    {
+      "start": 9.692,
+      "end": 9.993,
+      "text": "really",
+      "conf": 0.856
+    },
+    {
+      "start": 10.234,
+      "end": 10.595,
+      "text": "long",
+      "conf": 0.794
+    },
+    {
+      "start": 12.12,
+      "end": 12.943,
+      "text": "trunks.",
+      "conf": 0.213
+    },
+    {
+      "start": 12.963,
+      "end": 13.023,
+      "text": "And",
+      "conf": 0.359
+    },
+    {
+      "start": 13.063,
+      "end": 13.605,
+      "text": "that's",
+      "conf": 0.574
+    },
+    {
+      "start": 13.625,
+      "end": 14.388,
+      "text": "cool.",
+      "conf": 0.643
+    },
+    {
+      "start": 14.408,
+      "end": 17.177,
+      "text": "And",
+      "conf": 0.757
+    },
+    {
+      "start": 17.237,
+      "end": 17.397,
+      "text": "that's",
+      "conf": 0.559
+    },
+    {
+      "start": 17.438,
+      "end": 17.598,
+      "text": "pretty",
+      "conf": 0.813
+    },
+    {
+      "start": 17.618,
+      "end": 17.779,
+      "text": "much",
+      "conf": 0.929
+    },
+    {
+      "start": 17.859,
+      "end": 18.02,
+      "text": "all",
+      "conf": 0.467
+    },
+    {
+      "start": 18.04,
+      "end": 18.22,
+      "text": "there",
+      "conf": 0.297
+    },
+    {
+      "start": 18.321,
+      "end": 18.401,
+      "text": "is",
+      "conf": 0.479
+    },
+    {
+      "start": 18.421,
+      "end": 18.581,
+      "text": "to",
+      "conf": 0.54
+    },
+    {
+      "start": 19.023,
+      "end": 19.103,
+      "text": "say.",
+      "conf": 0.25
+    }
+  ],
+  "raw_result": {
+    "segments": [
+      {
+        "text": " Alright, so here we are in front of the elephants. The cool thing about these guys is that they have really, really, really long trunks. And that's cool. And that's pretty much all there is to say.",
+        "start": 0.402,
+        "end": 19.083
+      }
+    ],
+    "language": "en"
+  }
+}

@@ -1,0 +1,51 @@
+# Simple OpenSessionScribe Docker Image
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    tesseract-ocr \
+    tesseract-ocr-eng \
+    curl \
+    git \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install yt-dlp (latest version)
+RUN pip install yt-dlp
+
+# Install Ollama (for VLM descriptions)
+RUN curl -fsSL https://ollama.ai/install.sh | sh
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy source code
+COPY opensessionscribe/ ./opensessionscribe/
+COPY cli/ ./cli/
+COPY scripts/ ./scripts/
+
+# Create directories for models and cache
+RUN mkdir -p /app/.opensessionscribe/models /app/.opensessionscribe/cache /app/output
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV OPENSESSIONSCRIBE_MODELS_DIR=/app/.opensessionscribe/models
+ENV OPENSESSIONSCRIBE_CACHE_DIR=/app/.opensessionscribe/cache
+
+# Expose port for potential web interface (Phase 2)
+EXPOSE 8000
+
+# Default command
+ENTRYPOINT ["python", "-m", "cli.main"]
+CMD ["--help"]
+
+# Example usage:
+# docker build -f Dockerfile.simple -t opensessionscribe .
+# docker run -v $(pwd)/output:/app/output opensessionscribe process "https://youtube.com/watch?v=example"

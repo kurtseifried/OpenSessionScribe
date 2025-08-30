@@ -1,0 +1,36 @@
+# OpenSessionScribe Dependencies
+
+# Core dependencies
+typer>=0.9.0           # CLI framework
+pydantic>=2.0.0        # Data validation and serialization
+PyYAML>=6.0            # Configuration file support
+requests>=2.31.0       # HTTP requests for Ollama VLM
+
+# Audio/Video processing
+whisperx               # Speech recognition with alignment
+pyannote-audio>=3.1.0  # Speaker diarization
+torch>=2.0.0          # PyTorch (required by whisperx/pyannote)
+torchaudio>=2.0.0     # Audio processing for PyTorch
+
+# OCR and Image processing  
+paddleocr              # Primary OCR engine
+opencv-python>=4.8.0  # Image processing for slide analysis
+Pillow>=9.0.0         # Image manipulation
+imagehash>=4.3.1      # Perceptual hashing for duplicate detection
+
+# Computer Vision (for slide processing)
+scikit-image>=0.21.0   # Image processing utilities
+
+# Scene detection (optional enhancement)
+scenedetect>=0.6.2     # Video scene change detection
+
+# Audio processing utilities
+librosa>=0.10.0        # Audio analysis library
+
+# Development dependencies (optional)
+pytest>=7.0.0          # Testing framework
+black>=23.0.0          # Code formatting
+mypy>=1.0.0           # Type checking
+
+# System integration
+psutil>=5.9.0         # System information for hardware detection
