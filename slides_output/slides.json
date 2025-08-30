@@ -1,0 +1,19 @@
+[
+  {
+    "index": 0,
+    "timestamp": 0.0,
+    "image_path": "slides_output/slides/slide_000.jpg",
+    "phash": null,
+    "crop": null,
+    "ocr": {
+      "engine": "tesseract",
+      "text": "",
+      "confidence": 0.0,
+      "blocks": []
+    },
+    "description": null,
+    "bullets": null,
+    "chart": null,
+    "ascii_art": null
+  }
+]

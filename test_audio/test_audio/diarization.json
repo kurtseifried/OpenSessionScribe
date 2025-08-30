@@ -1,0 +1,16 @@
+{
+  "model": "minimal_fallback",
+  "speakers": [
+    "SPEAKER_00"
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 20.0,
+      "speaker": "SPEAKER_00",
+      "duration": 20.0
+    }
+  ],
+  "total_speakers": 1,
+  "total_segments": 1
+}
